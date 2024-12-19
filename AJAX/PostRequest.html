@@ -10,11 +10,23 @@
       function ExcPostRequest()
       {
       var URL = "https://crud.teamrabbil.com/api/v1/CreateProduct"; // URL of the API to be called
+      var BodyData ={}
 
-                 
 
+      
+}
+      
+      var  Config={
+           method : "POST", // Configuration of the request method
+           Headers :{
+            'Accept': 'application/json', // Accepting the data in JSON format
+            'Content-Type': 'application/json' // Sending the data in JSON format
+           },
+           body: JSON.stringify(BodyData) // Converting the data to JSON format
 
       }
+
+                 
     </script>
     
 </body>
