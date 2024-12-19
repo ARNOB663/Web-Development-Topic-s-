@@ -6,6 +6,7 @@
     <title>Document</title>
 </head>
 <body>
+    <button onclick="ExcGetRequest()">ExcGetRequest</button>
     
 <script>
   function ExcGetRequest(){
@@ -16,9 +17,7 @@
     fetch(URL,Configuration) // Fetching the data from the API
     .then(responce=>responce.json()) // Converting the responce to JSON
     .then(result=> console.log(result)) // Printing the result in the console 
-    .catch(err=console.log(err)) // Catching the error if any 
-
-
+    .catch(error=>console.log(error)) // Catching the error if any 
 
   }
 
