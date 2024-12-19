@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unordered List</title>
+</head>
+
+<body>
+    <!-- Unordered List -->
+    <ul>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+    </ul>
+
+    <!-- Ordered List -->
+    <ol>
+        <li>Learn HTML</li>
+        <li>Practice CSS</li>
+        <li>Master JavaScript</li>
+    </ol>
+
+</body>
+
+</html>
