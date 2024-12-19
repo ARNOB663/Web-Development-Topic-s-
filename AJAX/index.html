@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<script>
+  function ExcGetRequest(){
+
+    var URL = "https://crud.teamrabbil.com/api/v1/ReadProduct"; // URL of the API to be called
+    var Configuration={method:"GET"} // Configuration of the request method 
+
+    fetch(URL,Configuration) // Fetching the data from the API
+    .then(responce=>responce.json()) // Converting the responce to JSON
+    .then(result=> console.log(result)) // Printing the result in the console 
+    .catch(err=console.log(err)) // Catching the error if any 
+
+
+
+  }
+
+
+
+
+</script>
+
+
+</body>
+</html>
