@@ -3,33 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Post Request</title>
 </head>
 <body>
+    <button onclick="ExcPostRequest()">Exec Post</button>
+
     <script>
-      function ExcPostRequest()
-      {
-      var URL = "https://crud.teamrabbil.com/api/v1/CreateProduct"; // URL of the API to be called
-      var BodyData ={Img:"123",ProductName:"123",ProductCode:"123",Qty:"123",UnitPrice:"123",TotalPrice:"123,"} // Data to be sent to the APIq    
-      
-      var  Config={
-           method : "POST", // Configuration of the request method
-           Headers :{
+      function ExcPostRequest() {
+        var URL = "https://crud.teamrabbil.com/api/v1/CreateProduct"; // URL of the API to be called
+        var BodyData = {
+          ProductName: "Demo2",
+          ProductCode: "21131231",
+          Img: "abcd",
+          UnitPrice: "112",
+          Qty: "3",
+          TotalPrice: "120"
+        }; // Data to be sent to the API
+
+        var Config = {
+          method: "POST", // Configuration of the request method
+          headers: {
             'Accept': 'application/json', // Accepting the data in JSON format
             'Content-Type': 'application/json' // Sending the data in JSON format
-           },
-           body: JSON.stringify(BodyData) // Converting the data to JSON format
+          },
+          body: JSON.stringify(BodyData) // Converting the data to JSON format
+        };
+
+        fetch(URL, Config)
+          .then(response => response.json()) // Converting the response to JSON
+          .then(result => console.log(result)) // Printing the result in the console
+          .catch(error => console.log(error)); // Catching the error if any
       }
-       fetch(URL,Config){
-        
-       }
-
-
-
-    }
-
-                 
     </script>
-    
 </body>
 </html>
