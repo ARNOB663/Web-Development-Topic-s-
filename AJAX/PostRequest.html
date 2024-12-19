@@ -10,11 +10,7 @@
       function ExcPostRequest()
       {
       var URL = "https://crud.teamrabbil.com/api/v1/CreateProduct"; // URL of the API to be called
-      var BodyData ={}
-
-
-      
-}
+      var BodyData ={Img:"123",ProductName:"123",ProductCode:"123",Qty:"123",UnitPrice:"123",TotalPrice:"123,"} // Data to be sent to the APIq    
       
       var  Config={
            method : "POST", // Configuration of the request method
@@ -23,8 +19,14 @@
             'Content-Type': 'application/json' // Sending the data in JSON format
            },
            body: JSON.stringify(BodyData) // Converting the data to JSON format
-
       }
+       fetch(URL,Config){
+        
+       }
+
+
+
+    }
 
                  
     </script>
