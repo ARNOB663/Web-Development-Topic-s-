@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Audio</title>
+</head>
+<body>
+  <audio src="https://www.example.com/path/to/your/audiofile.mp3" controls></audio>
+</body>
+</html>
