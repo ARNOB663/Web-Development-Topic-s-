@@ -15,3 +15,5 @@ let person = {
   
   // Example usage:
   person.getName(); // My full name is Arnob Dev Nath
+    console.log(person); // { first_name: 'Arnob', last_name: 'Dev Nath', age: 22, city: 'Chittagong', isBangladeshi: true, getName: [Function: getName] }
+    console.log(person.first_name); // Arnob 
