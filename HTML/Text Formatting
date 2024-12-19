@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Formatting</title>
+</head>
+<body>
+    <p><strong>Bold text</strong></p>
+    <p><em>Italic text</em></p>
+    <p><mark>Highlighted text</mark></p>
+    <p>H<sub>2</sub>O (subscript) and 10<sup>2</sup> (superscript)</p>
+</body>
+</html>
