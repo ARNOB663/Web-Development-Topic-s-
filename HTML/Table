@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Table</title>
+</head>
+
+<body>
+    <!-- border 1 will add a border to the table -->
+    <table border="1">
+        <thead> 
+            <!-- Table head will be used to define the header of the table -->
+            <tr>
+                <th>Name</th>
+                <th>Age</th>
+                <th>City</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <!-- Table body will be used to define the body of the table -->
+            <tr>
+                <td>Raccoon</td>
+                <td>25</td>
+                <td>Bangalore</td>
+            </tr>
+            <tr>
+                <td>John</td>
+                <td>30</td>
+                <td>New York</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+
+</html>
