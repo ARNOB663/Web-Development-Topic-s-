@@ -1,0 +1,119 @@
+{
+	"info": {
+		"_postman_id": "d73f2780-ae4f-425e-94e8-889df2228519",
+		"name": "CRUD",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "9518923",
+		"_collection_link": "https://planetary-escape-12290.postman.co/workspace/MERN6~0529260f-ea04-4e47-a7c6-da56d12285a4/collection/9518923-d73f2780-ae4f-425e-94e8-889df2228519?action=share&source=collection_link&creator=9518923"
+	},
+	"item": [
+		{
+			"name": "ReadProduct",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://crud.teamrabbil.com/api/v1/ReadProduct",
+					"protocol": "https",
+					"host": [
+						"crud",
+						"teamrabbil",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"ReadProduct"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CreateProduct",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"ProductName\":\"Demo\",\n    \"ProductCode\":\"2113131\",\n    \"Img\":\"abc\",\n    \"UnitPrice\":\"12\",\n    \"Qty\":\"1\",\n    \"TotalPrice\":\"12\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://crud.teamrabbil.com/api/v1/CreateProduct",
+					"protocol": "https",
+					"host": [
+						"crud",
+						"teamrabbil",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"CreateProduct"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"ProductName\":\"XYZABC\",\n    \"ProductCode\":\"abc123\",\n    \"Img\":\"abc\",\n    \"UnitPrice\":\"12\",\n    \"Qty\":\"1\",\n    \"TotalPrice\":\"12\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://crud.teamrabbil.com/api/v1/UpdateProduct/66649031a9e9e30ec38d4431",
+					"protocol": "https",
+					"host": [
+						"crud",
+						"teamrabbil",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"UpdateProduct",
+						"66649031a9e9e30ec38d4431"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteProduct",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://crud.teamrabbil.com/api/v1/DeleteProduct/665eb6d109bb7ae5d3bd833e",
+					"protocol": "https",
+					"host": [
+						"crud",
+						"teamrabbil",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"DeleteProduct",
+						"665eb6d109bb7ae5d3bd833e"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
