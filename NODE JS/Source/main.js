@@ -1,3 +1,7 @@
 var http = require('http');
 
-http.createServer(function ())
+var server = http.createServer(function (req, res){
+
+res.eng("hello world");
+
+})
