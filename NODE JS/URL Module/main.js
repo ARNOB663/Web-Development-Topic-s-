@@ -6,7 +6,7 @@ var server = http.createServer(function(req,res){
      var myURLObj = URL.parse(myURL,true);
      var myHost=myURLObj.host;
      var myPathName=myURLObj.path;
-
+     var mySearchName=myURLObj.search;
 })
 
 server.listen(5050);
