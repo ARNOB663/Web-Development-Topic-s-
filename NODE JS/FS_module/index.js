@@ -5,6 +5,15 @@ var fs=require('fs');
 
 var server=http.createServer(function (req,res){
 
+    if(req.url=="/")
+    {   //asy method
+        fs.readFile('Home.html',function (error,data){
+
+        })
+    }
+    
+
+
 });
 
 server.listen(5050);
