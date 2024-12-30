@@ -11,9 +11,11 @@ var server = http.createServer(function(req,res){
      res.write(myHost);//this used for 
 
      res.write("<br>");//
-     
+
      res.write(myPathName);//
+
      res.write("<br>");//
+     
      res.write(mySearchName);
      res.end();//
 
