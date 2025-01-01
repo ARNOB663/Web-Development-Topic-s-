@@ -1,0 +1,13 @@
+{
+  "name": "asynchronous_fs_mathod",
+  "version": "1.0.0",
+  "description": "The `fs` module in Node.js provides the capability to interact with the file system, enabling operations like reading, writing, deleting, and manipulating files and directories. This README explains all supported methods, including both **asynchronous** and **synchronous** variants, and serves as a comprehensive guide for developers.\r ## Table of Contents\r 1. [Getting Started]()\r 2. [Asynchronous vs Synchronous]()\r 3. [Methods Overview]()\r     - [File Reading and Writing]()\r     - [File Information]()\r     - [File Manipulation]()\r     - [Directory Manipulation]()\r     - [Watching Files and Directories]()",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
