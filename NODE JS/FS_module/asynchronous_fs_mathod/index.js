@@ -7,7 +7,7 @@ var server=http.createServer(function (req,res){
     if(req.url=="/")
     {
 
-        fs.writeFile(demo.txt,"hello world",function(err,data){
+        fs.writeFile("demo.txt","hello world",function(error,data){
             if(error)
             {
                 res.writeHead(404,{'Content-Type':'text/plain'});
