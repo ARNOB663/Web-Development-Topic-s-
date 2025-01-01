@@ -7,7 +7,7 @@ var server=http.createServer(function (req,res){
     if(req.url=="/")
     {
 
-        fs.writeFile("demo.txt","hello world",function(error,data){
+        fs.writeFile("demo.txt","welcome to Node JS",function(error,data){
             if(error)
             {
                 res.writeHead(404,{'Content-Type':'text/plain'});
@@ -36,5 +36,5 @@ var server=http.createServer(function (req,res){
     }
 });
 
-server.listen(5151);
+server.listen(5152);
 console.log("Server started on port 5151");
