@@ -6,22 +6,43 @@ var server=http.createServer(function (req,res){
 
     if(req.url=="/")
     {
+            fs.rename('demo.txt','demo1.txt',function(error,data){
 
-        fs.writeFile("demo.txt","welcome to Node JS",function(error,data){
-            if(error)
-            {
-                res.writeHead(404,{'Content-Type':'text/plain'});
-                res.write("File Write Failed.");
-                res.end();
-            }
-            else
-            {
-                res.writeHead(200,{'content-type':'text/html'});
-                res.write("File Write Success!\n");
+                if(error)
+                {
+                    res.writeHead(404,{'Content-Type':'text/plain'});
+                    res.write("File Rename Failed.");
+                    res.end();
+                }
+                else
+                {
+                    res.writeHead(200,{'content-type':'text/html'});
+                    res.write("File Rename Success!\n");
+                    res.end();
+                }
 
-            }
+            })
+                     
+            
 
-        })
+
+
+
+        // fs.writeFile("demo.txt","welcome to Node JS",function(error,data){
+        //     if(error)
+        //     {
+        //         res.writeHead(404,{'Content-Type':'text/plain'});
+        //         res.write("File Write Failed.");
+        //         res.end();
+        //     }
+        //     else
+        //     {
+        //         res.writeHead(200,{'content-type':'text/html'});
+        //         res.write("File Write Success!\n");
+
+        //     }
+
+        // })
 
         //asy method
         // fs.readFile('Home.html',function (error,data){
