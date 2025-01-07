@@ -6,22 +6,21 @@ var server=http.createServer(function (req,res){
 
     if(req.url=="/")
     {
-            fs.rename('demo.txt','demo1.txt',function(error,data){
+           let result = fs.renameSync('demo.txt','demoSync.txt');
+           if(result){
+               res.writeHead(200,{'Content-Type':'text/html'});
+               res.write('file renamed '+result);
+               res.end();
+           }
+           else
+           {
+               res.writeHead(404,{'Content-Type':'text/html'});
+               res.write('file 404 not found');
+               res.end();
 
-                if(error)
-                {
-                    res.writeHead(404,{'Content-Type':'text/plain'});
-                    res.write("File Rename Failed.");
-                    res.end();
-                }
-                else
-                {
-                    res.writeHead(200,{'content-type':'text/html'});
-                    res.write("File Rename Success!\n");
-                    res.end();
-                }
+           }
 
-            })
+
                      
             
 

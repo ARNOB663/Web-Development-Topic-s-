@@ -7,7 +7,7 @@ var server=http.createServer(function (req,res){
     if(req.url=="/")
     {
 
-      let error =  fs.writeFileSync('DemoSync.txt','welcome to sync');
+      let error =  fs.renameSync('demo.txt','demoSync2.txt');
 
 
         if(error)
