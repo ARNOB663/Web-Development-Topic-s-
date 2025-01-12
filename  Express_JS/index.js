@@ -15,11 +15,33 @@ app.post("/two",function (req,res){
    // res.send("This is simple string responce");
     res.end('Welcome');
 })
-
+//Responce status code
 app.get('/three',function (req,res){
     res.status(401).end('Unauthorized');
 })
-
+//JSON Response
+app.get('/four',function (req,res){
+    let myJson = [ {
+     name:"John",
+     email:"john@gmail.com",
+     age:43,
+       password:"123456"
+    },
+        {
+            name:"Arnob",
+            email:"arnob@gmail.com",
+            age:16,
+            password:"123456"
+        },
+        {
+            name:"Arnob2",
+            email:"arnob229x@gmail.com",
+            age:18,
+            password:"123456"
+        }
+    ]
+    res.json(myJson);
+})
 
 
 
