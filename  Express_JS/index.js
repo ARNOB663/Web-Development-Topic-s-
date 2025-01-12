@@ -1,11 +1,12 @@
-var express=require('express');
-app=express();
+var express= require('express')
+
+app= express()
+
 
 app.get("/",function (req,res){
-    res.send("hello express")
+    res.send("hello world")
 })
 
-
 app.listen(8080,function (){
-    console.log("App listening on 8080");
-});
+    console.log("Server running on port 8080")
+})
