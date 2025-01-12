@@ -7,12 +7,16 @@ app.get("/",function (req,res){
     res.send("hello world");
 })
 
-app.get("/about",function(req,res){
+app.post("/about",function(req,res){
     res.send("about");
 })
 
-app.get("/contact",function (req,res){
+app.put("/contact",function (req,res){
     res.send("contact");
+})
+
+app.delete("/term",function (req,res){
+    res.send("term");
 })
 
 app.listen(8080,function (){
