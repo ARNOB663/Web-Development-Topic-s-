@@ -77,9 +77,9 @@ app.get("/seven",function (req,res){
 app.get("/eight",function (req,res){
    res.clearCookie('name');
    res.clearCookie('email');
-
     res.end("clear cookies")
 })
+
 
 
 
