@@ -15,9 +15,19 @@ app.get('/',function(req,res){
 
     res.send("This is home page")
 })
+
+
 app.get('/contact',function(req,res){
     res.send("Contact me")
 })
+
+
+app.use('/about',function(req,res,next){
+ 
+     console.log("im router level middleware for about section");
+    next()
+})
+
 app.get('/about',function(req,res){
     res.send("About Me")
 })
