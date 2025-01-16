@@ -6,6 +6,7 @@ var multer=multer()
 var app=express();
 
 app.use(multer.array())
+
 app.use(express.static('public'));
 
 app.post('/',function (req,res){
