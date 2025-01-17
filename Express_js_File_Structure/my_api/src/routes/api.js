@@ -6,10 +6,8 @@
  router.get("/hello-get",HelloController.HelloGet)
  router.post("/hello-post",HelloController.HelloPost)
 
- //Undifined route
- app.use("*",(req,res)=>{
-     res.status(404).send("Not found")
- })
+
+
 
 
  module.exports = router;
