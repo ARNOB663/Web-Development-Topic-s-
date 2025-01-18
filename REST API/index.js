@@ -9,6 +9,11 @@ const port = 8000;
 //Middleware
 app.use(express.urlencoded({extended:false}))//parse application/x-www-form-urlencoded
 
+app.use((req,res,next) => {
+   console.log("I am a middleware")
+    next();
+})
+
 //Routes
 app.get("/api/users",(req,res) => {
     return res.json(users)
