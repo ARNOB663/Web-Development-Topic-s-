@@ -72,7 +72,7 @@ app.route("/api/users/:id").get((req,res) => {
     //todo delete the user with id
 
     const id = req.params.id;
-    const user = users.find(user => user.id == id);
+    const user = users.find(user => user.id == id);//find the user
     const index = users.indexOf(user);
     users.splice(index,1);//remove the user from the array
     fs.writeFile("./MOCK_DATA.json",JSON.stringify(users),(err,data) => {
