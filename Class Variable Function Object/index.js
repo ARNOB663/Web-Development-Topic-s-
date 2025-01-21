@@ -1,4 +1,5 @@
-//
+//class variable function object
+
 class person {
  
     first_name = "Arnob";
@@ -10,4 +11,5 @@ class person {
     {
         return `My name is  ${this.first_name} ${this.last_name}`;
     }
+    
 }
