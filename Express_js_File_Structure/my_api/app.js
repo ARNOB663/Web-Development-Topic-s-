@@ -1,3 +1,4 @@
+const mongoose = require('mongoose');
 const express = require('express');
 const router = require("./src/routes/api");
 const app= new express();
@@ -26,6 +27,23 @@ const limiter = rateLimit({
     });
 
     app.use(limiter);//this is the middleware that will be used for all the routes that start with /api/v1
+
+//Mongodb Database Connection
+let URI="mongodb://localhost:27017/Schools";
+let options = {user:'', pass:''};
+//let options = {user:'admin', pass:'admin123'};
+//let URI = "mongodb://localhost:27017/Schools";
+
+mongoose.connect(URI,options).then(()=>{
+    console.log("Database Connection Successful");
+}).catch((err)=>{
+    console.log("Database Connection Failed");
+    console.log(err);
+});
+
+
+
+
 
 app.use("/api/v1",router);//this is the middleware that will be used for all the routes that start with /api/v1
 
