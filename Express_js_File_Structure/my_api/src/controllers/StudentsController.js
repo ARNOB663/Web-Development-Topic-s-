@@ -25,3 +25,14 @@ exports.ReadStudent = async (req, res) => {
     }
 }
 //U = Update
+exports.UpdateStudent = async (req, res) => {
+    try {
+        let id = req.params.id;
+        let query = { _id: id };
+        let updateData = req.body;
+        let data = await StudentsModel.updateOne(query, updateData);
+        res.status(200).json({ status: "success", data: data });
+    } catch (err) {
+        res.status(400).json({ status: "failed", data: err });
+    }
+}
