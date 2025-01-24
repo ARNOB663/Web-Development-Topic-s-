@@ -1,23 +1,9 @@
 const StudentsModel = require('../models/StudentModel.js');
-//
+//CURD Operation
 
 
 
-
-
-
-
-// exports.InsertStudent = (req, res) => {
-//  let reqBody = req.body;
-//   StudentsModel.create(reqBody,(err,data)=>{
-//     if(err){
-//         res.status(400).json({status:'failed',data:err});
-//     }else{
-//         res.status(200).json({status:'success',data:data});
-//     }
-
-//   }
-//   )}
+//C = Create
 exports.InsertStudent = async (req, res) => {
     try {
         let reqBody = req.body;
@@ -25,5 +11,16 @@ exports.InsertStudent = async (req, res) => {
         res.status(200).json({ status: 'success', data: data });
     } catch (err) {
         res.status(400).json({ status: 'failed', data: err });
+    }
+}
+//R = Read 
+exports.ReadStudent = async (req, res) => {
+    try {
+        let Query = {};
+        let projection = "Name Roll Class";
+        let data = await StudentsModel.find(Query, projection);
+        res.status(200).json({ status: "success", data: data });
+    } catch (err) {
+        res.status(400).json({ status: "failed", data: err });
     }
 }

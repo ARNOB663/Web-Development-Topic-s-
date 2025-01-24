@@ -12,6 +12,7 @@
 
  //Mongooes 
  router.post("/InsertStudent",StudentsController.InsertStudent)
+ router.get("/ReadStudent",StudentsController.ReadStudent)
 
 
  module.exports = router;
