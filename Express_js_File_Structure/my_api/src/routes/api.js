@@ -15,6 +15,7 @@
  router.post("/InsertStudent",StudentsController.InsertStudent)
  router.get("/ReadStudent",StudentsController.ReadStudent)
  router.post("/UpdateStudent/:id",StudentsController.UpdateStudent)
+ router.delete("/DeleteStudent/:id",StudentsController.DeleteStudent)
 
 
  module.exports = router;
