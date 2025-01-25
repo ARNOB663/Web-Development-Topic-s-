@@ -10,6 +10,7 @@ const xss = require('xss-clean');
 const hpp = require('hpp');
 const cors = require('cors');
 const bodyParser = require('body-parser');
+// const morgan = require('morgan');
 
 // Security Middleware implementation
 // app.use(cors());
