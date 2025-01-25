@@ -11,7 +11,7 @@
  router.post("/hello-post",HelloController.HelloPost)
 
 
- //Mongooes 
+ //Mongooes CURD Operation 
  router.post("/InsertStudent",StudentsController.InsertStudent)
  router.get("/ReadStudent",StudentsController.ReadStudent)
  router.post("/UpdateStudent/:id",StudentsController.UpdateStudent)
