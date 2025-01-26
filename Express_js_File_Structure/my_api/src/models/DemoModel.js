@@ -10,5 +10,6 @@ const DataSchema = new mongoose.Schema({
     Comments:[],
     details:{},
     dob:{type: Date, default: Date.now},
-})
+},{versionKey:false});
+
 const DemoModel =  mongoose.model('students',DataSchema);

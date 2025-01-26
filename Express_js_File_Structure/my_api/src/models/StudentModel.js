@@ -7,7 +7,7 @@ Roll:String,
 Class:String,
 Remarks:String
 
-})
+},{versionKey:false});
 
 const StudentsModel = mongoose.model('students',DataSchema);
 
