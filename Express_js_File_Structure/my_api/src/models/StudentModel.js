@@ -9,8 +9,21 @@ const DataSchema = mongoose.Schema({
     max: [12, "Roll number must be under 12 digits, but you have entered = {VALUE}"], // Custom error message Validation for max number of digits
   },
   Class: String,
+  Mobile: {
+    type: String,
+    validate: {
+      validator: function(value) {
+       if (value.length === 11) {
+          return true;
+        } else {
+          return false;
+      }
+    },
+    message: "Mobile number must be exactly 11 digits"
+  }
+  },
   Remarks: { type: String, default: "Not Available" }, // default value set
-}, { versionKey: false });
+}, {versionKey:false });
 
 const StudentsModel = mongoose.model('students', DataSchema);
 
