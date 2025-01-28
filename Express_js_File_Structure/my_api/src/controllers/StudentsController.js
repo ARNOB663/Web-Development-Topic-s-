@@ -1,7 +1,6 @@
 const req = require('express/lib/request.js');
 const StudentsModel = require('../models/StudentModel.js');
 //CURD Operation
-
 //C = Create
 exports.InsertStudent = async (req, res) => {
     try {
@@ -37,7 +36,6 @@ exports.UpdateStudent = async (req, res) => {
 }   
 // D = Delete
 exports.DeleteStudent = async (req,res)=>{
-
 try{
     let id = req.params.id;//Gets id from the URL parameter
     let query = {_id:id}; //This will create a query object with the id
@@ -48,6 +46,4 @@ catch(err){
   res.status(400).json({status:"failed",data:err});
 
 }
-
-
 }

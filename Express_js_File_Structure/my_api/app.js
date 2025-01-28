@@ -43,6 +43,7 @@ mongoose.connect(URI, options).then(() => {
     console.log(err);
 });
 
+
 app.use("/api/v1", router); // this is the middleware that will be used for all the routes that start with /api/v1
 
 // Undefined route
