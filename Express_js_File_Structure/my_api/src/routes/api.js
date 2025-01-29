@@ -1,4 +1,5 @@
  const StudentsController = require("../controllers/StudentsController.js");
+    const JWTPrectice = require("../controllers/JWTPrectice.js");
  
  
  const expresss= require( "express" );
@@ -16,6 +17,10 @@
  router.get("/ReadStudent",StudentsController.ReadStudent)
  router.post("/UpdateStudent/:id",StudentsController.UpdateStudent)
  router.delete("/DeleteStudent/:id",StudentsController.DeleteStudent)
+ //Creat JWT Token
+ router.get("/Createtoken", JWTPrectice.CreatToken);
+ //Decode JWT Token
+    router.get("/Decodetoken", JWTPrectice.DecodeToken);
 
 
  module.exports = router;
