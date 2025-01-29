@@ -1,4 +1,4 @@
-const e = require('express');
+
 var jwt = require('jsonwebtoken');
 
 exports.CreatToken = function (req, res) {

@@ -5,6 +5,8 @@
  const expresss= require( "express" );
  const  HelloController = require("../controllers/HelloController.js");
  const router = expresss.Router();
+ const TokenVerfyMiddleware = require("../middleware/TokenVerfyMiddleware.js");
+ const TokenIssueController = require("../controllers/TokenIssueController.js");
 
  //This is my 1st get routing
  router.get("/hello-get",HelloController.HelloGet)
@@ -13,14 +15,18 @@
 
 
  //Mongooes CURD Operation 
- router.post("/InsertStudent",StudentsController.InsertStudent)
- router.get("/ReadStudent",StudentsController.ReadStudent)
- router.post("/UpdateStudent/:id",StudentsController.UpdateStudent)
- router.delete("/DeleteStudent/:id",StudentsController.DeleteStudent)
- //Creat JWT Token
- router.get("/Createtoken", JWTPrectice.CreatToken);
- //Decode JWT Token
-    router.get("/Decodetoken", JWTPrectice.DecodeToken);
+ //apply JWT Token for all routes
+ router.get("/TokenIssue",TokenIssueController.TokenIssue)
+ router.post("/InsertStudent",TokenVerfyMiddleware,StudentsController.InsertStudent)
+ router.get("/ReadStudent",TokenVerfyMiddleware,StudentsController.ReadStudent)
+ router.post("/UpdateStudent/:id",TokenVerfyMiddleware,StudentsController.UpdateStudent)
+ router.delete("/DeleteStudent/:id",TokenVerfyMiddleware,StudentsController.DeleteStudent)
+
+
+//Creat JWT Token practice
+router.get("/Createtoken", JWTPrectice.CreatToken);
+//Decode JWT Token practice
+router.get("/Decodetoken", JWTPrectice.DecodeToken);
 
 
  module.exports = router;
